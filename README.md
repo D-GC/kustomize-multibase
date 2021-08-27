@@ -110,7 +110,7 @@ As you can see the image tag is not present in the output
 The reason why `kustomize edit set image` doesn't work is because it only updates the tag in current directory.
 After running above command if you check the [overlays/kustomization.yaml](./overlays/kustomization.yaml), you'll see the image `newTag` was added.
 
-###Solutions
+### Solutions
 1. cd into each deployment and the run `kustomize edit set image` and `popd` to run the multibase kustomization.
 But it might be too much if there are many deployments of a same app with different names.
 
